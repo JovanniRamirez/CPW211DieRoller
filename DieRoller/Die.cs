@@ -24,9 +24,11 @@ namespace DieRoller
 		public byte Roll()
 		{
 			//Generate random number
-			//Set to face value
-			//Return new number
-			throw new NotImplementedException();
+			Random random = new Random();
+			byte newValue = (byte)random.Next(1, 7);
+			FaceValue = newValue;
+
+			return FaceValue;
 		}
 	}
 }
