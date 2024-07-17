@@ -7,9 +7,17 @@ namespace DieRoller
 	internal class Die
 	{
 		/// <summary>
-		/// Face up value (what was rolled?)
+		/// Creates the die and rolls it to start with a random number
 		/// </summary>
-		public byte FaceValue { get; set; }
+        public Die()
+        {
+			Roll();
+        }
+
+        /// <summary>
+        /// Face up value (what was rolled?)
+        /// </summary>
+        public byte FaceValue { get; private set; }
 
 		/// <summary>
 		/// True if the die is currently held
